@@ -6,22 +6,15 @@
 body {
     margin: 0;
 }
-/*.header {    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}*/
 
 .header {
     display: grid;
     grid-template-columns: 15fr 1fr 1fr 1fr;
-    margin-left: 20px;
 }
-
-
 
 .logo_reservia {
     width: 100px;
+    margin-left: 20px;
 }
 
 .header a{
@@ -53,7 +46,7 @@ body {
 
 .fa-map-marker-alt {
     background: #F2F2F2;
-    padding: 11px;
+    padding: 12px;
     border-radius: 15px 0 0 15px;
 }
 
@@ -341,24 +334,27 @@ body {
 /* FOOTER */
 
 .footer {
-    display: flex;
     background: #F2F2F2;
     margin-top: 50px;
-    width: 100%;
+    width: 100%;   
+}
+
+.marge_footer {
+    display: flex;
     justify-content: space-between;
 }
 
-.footer li {
+.marge_footer li {
     list-style: none;
     width: auto;
     line-height: 2em;
 }
 
-.footer li h3 {
+.marge_footer li h3 {
     font-size: 20px;
 }
 
-.footer ul:last-child {
+.marge_footer ul:last-child {
     margin-right: 29%;
 }
 
@@ -462,11 +458,6 @@ body {
         width: auto;
     }
     
-    .populaires {
-        width: auto;
-        margin: auto;
-    }
-    
     .box_populaires {
         display: flex;
     }
@@ -501,9 +492,8 @@ body {
     
     /*FOOTER*/
     
-    .footer ul:last-child {
-        margin-right: 0;
-        padding-right: 40px;
+    .marge_footer ul:last-child {
+        margin-right: 40px;
     }
 }
 
@@ -548,8 +538,8 @@ body {
     
     .box_populaires {
         display: grid;
-        grid-template-columns:  50% 50%;
-        grid-template-rows: 50% 50%;
+        grid-template-columns:  49% 49%;
+        justify-items: center;
     }
     
     .top_populaire {
@@ -561,6 +551,15 @@ body {
     .article_aside {
         width: 95%;
         margin-bottom: 15px;
+    }
+    
+    .image_populaire {
+        min-width: inherit;
+    }
+    
+    .marge_footer {
+        flex-wrap: wrap;
+        margin-right: 15px;
     }
     
     
@@ -615,13 +614,11 @@ body {
         justify-content: center;
     }
     
-    .barre_de_recherche { 
-        border: none;
-    }
-    
     .bouton {
         text-indent: -9999em;
-        border-radius:10px 10px 10px 10px
+        border-radius:10px 10px 10px 10px;
+        position: absolute;
+        margin-left: 80%
     }
     .fa-search {
         text-indent: 9993.6em;
@@ -773,16 +770,37 @@ body {
     
     /* FOOTER */
     
-    .footer {
+    .marge_footer {
         flex-direction: column;
         padding-bottom: 50px;
     }
     
-    .footer ul:last-child {
+    .marge_footer ul:last-child {
         margin: 0;
     }
     
-    .footer h3 {
+    .marge_footer h3 {
         margin: 0;
     }
+}
+
+@media (max-device-width: 390px){
+    
+    /*POPULAIRES*/
+    
+    .article_aside {
+        flex-direction: column;
+        justify-content: none;
+    }
+    
+    .image_populaire {
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 25px;
+    }
+    
+    .populaire {
+        margin: 0;
+    }
+    
 }
