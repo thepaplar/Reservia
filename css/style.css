@@ -547,15 +547,20 @@ body {
     /* POPULAIRES */
     
     .box_populaires {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns:  50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+    
+    .top_populaire {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin: auto;
     }
     
     .article_aside {
-        width: 45%;
-    }
-    
-    .image_populaire {
-        min-width: inherit;
+        width: 95%;
+        margin-bottom: 15px;
     }
     
     
